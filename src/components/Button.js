@@ -26,7 +26,7 @@ class Button extends Component {
             <>
                 <h2>Button Challenge</h2>
 
-                <button onClick={ this.handleClick }>Click</button>
+                <button className="btn btn-primary" onClick={ this.handleClick }>Click</button>
         
             </>
         );
