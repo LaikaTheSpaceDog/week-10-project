@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "../axiosconfig";
-import { ListGroup, Navbar } from "react-bootstrap";
+import { ListGroup, Navbar, Button, Container } from "react-bootstrap";
 
 class Articles extends Component {
   constructor(props) {
@@ -31,8 +31,13 @@ class Articles extends Component {
         </Navbar>
         <ListGroup>
           { articles.map(article => (
-            <ListGroup.Item key={ article.id } className="list-group-item">
+            <ListGroup.Item key={ article.id } className="list-group-item" style={{ display: "flex"}}>
                 { article.title }
+                <Container style={{ display: "flex", justifyContent: "flex-end" }}>
+                    {article.tags.map(tag => (
+                        <Button key={ tag }variant="dark" style={{ margin: 3 }}>{ tag }</Button>
+                    ))}
+                </Container>
             </ListGroup.Item>
           )) }
         </ListGroup>
