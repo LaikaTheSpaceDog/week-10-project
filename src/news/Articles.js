@@ -34,8 +34,8 @@ class Articles extends Component {
             <ListGroup.Item key={ article.id } className="list-group-item" style={{ display: "flex"}}>
                 { article.title }
                 <Container style={{ display: "flex", justifyContent: "flex-end" }}>
-                    {article.tags.map(tag => (
-                        <Button key={ tag }variant="dark" style={{ margin: 3 }}>{ tag }</Button>
+                    {article.tags.map((tag, index) => (
+                        <Button key={ index }variant="dark" style={{ margin: 3 }}>{ tag }</Button>
                     ))}
                 </Container>
             </ListGroup.Item>
