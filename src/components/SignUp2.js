@@ -21,8 +21,16 @@ class SignUp2 extends Component {
             <>
                 <h2>Sign Up: Second Attempt</h2>
                 <Form>
-                    <Password2 value={ input1 } label={ "Password" } valid={ (input1 === input2) && input1.length > minimumLength } handleChange={ (e) => this.setState({ input1: e.currentTarget.value }) } />
-                    <Password2 value={ input2 } label={ "Confirm Password" } valid={ (input1 === input2) && input2.length > minimumLength } handleChange={ (e) => this.setState({ input2: e.currentTarget.value }) }/>
+                    <Password2 
+                        value={ input1 } 
+                        label={ "Password" } 
+                        valid={ (input1 === input2) && (input1.length > minimumLength) } 
+                        handleChange={ (e) => this.setState({ input1: e.currentTarget.value }) } />
+                    <Password2 
+                        value={ input2 } 
+                        label={ "Confirm Password" } 
+                        valid={ (input1 === input2) && (input2.length > minimumLength) } 
+                        handleChange={ (e) => this.setState({ input2: e.currentTarget.value }) }/>
                 </Form>
             </>
         );

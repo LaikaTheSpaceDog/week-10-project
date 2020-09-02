@@ -14,10 +14,13 @@ class Button extends Component {
     }
 
     handleClick() {
-        let current = this.state.counter;
-        let { handleUpdate } = this.props;
-        this.setState({counter: current + 1 })
-        handleUpdate(this.state.counter);
+        const { handleUpdate } = this.props;
+        const { counter } = this.state;
+        const updatedCount = counter + 1;
+        this.setState({
+            counter: updatedCount
+        });
+        handleUpdate(updatedCount);
     }
 
     render() {
