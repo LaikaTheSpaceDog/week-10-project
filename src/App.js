@@ -5,6 +5,7 @@ import Button from './components/Button';
 import Form from './components/Form';
 import SignUp2 from './components/SignUp2';
 import Articles from './news/Articles';
+import Article from './news/Article';
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 
 const App = () => (
@@ -12,6 +13,9 @@ const App = () => (
     <Route exact path="/news">
       <Articles />
     </Route>
+    <Route exact path="/news/:id" render={ ({ match }) => (
+      <Article id={match.params.id} />
+    )} />
     <Route exact path="/random">
       <Squares />
       <SignUp minimumLength={ 12 } />
