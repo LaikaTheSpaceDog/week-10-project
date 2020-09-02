@@ -4,15 +4,18 @@ import SignUp from './components/SignUp';
 import Button from './components/Button';
 import Form from './components/Form';
 import SignUp2 from './components/SignUp2';
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 
 const App = () => (
-  <>
-    <Squares />
-    <SignUp minimumLength={ 12 } />
-    <Button handleUpdate={ (value) => console.log(value) } />
-    <Form handleSubmit={ (object) => console.log(object) } />
-    <SignUp2 minimumLength={ 12 } />
-  </>
+  <Router>
+    <Route exact path="/random">
+      <Squares />
+      <SignUp minimumLength={ 12 } />
+      <Button handleUpdate={ (value) => console.log(value) } />
+      <Form handleSubmit={ (object) => console.log(object) } />
+      <SignUp2 minimumLength={ 12 } />
+    </Route>
+  </Router>
 );
 
 export default App;
