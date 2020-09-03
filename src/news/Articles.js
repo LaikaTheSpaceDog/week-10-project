@@ -27,7 +27,7 @@ class Articles extends Component {
     return !loaded ? <p>Loading...</p> : (
       <>
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand>Articles</Navbar.Brand>
+            <Navbar.Brand>An Amazing Blog</Navbar.Brand>
         </Navbar>
         <ListGroup>
           { articles.map(article => (
