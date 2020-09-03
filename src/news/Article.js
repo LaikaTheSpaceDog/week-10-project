@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "../axiosconfig";
 import FourOhFour from './FourOhFour';
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Container, Button } from "react-bootstrap";
 
 
 class Articles extends Component {
@@ -42,6 +42,9 @@ class Articles extends Component {
         <Container>
           <h2>{ article.title }</h2>
           <p>{ article.content }</p>
+          {article.tags.map((tag, index) => (
+            <Button key={ index }variant="dark" style={{ marginRight: 3 }}>{ tag }</Button>
+          ))}
         </Container>
       </>
     ));
