@@ -37,7 +37,7 @@ class Articles extends Component {
     return !loaded ? <p>Loading...</p> : ( notFound ? <FourOhFour /> : (
       <>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand>An Amazing Blog</Navbar.Brand>
+          <Navbar.Brand href="/news">An Amazing Blog</Navbar.Brand>
         </Navbar>
         <Container>
           <h2>{ article.title }</h2>
