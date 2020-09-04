@@ -34,7 +34,7 @@ const StepReducer = ({ step, max }) => {
     return (
         <>
             <h2>Step Reducer</h2>
-            {/* <p>{counter >= max || counter <= 0 ? "Limit reached" : "Step Counter"}</p> */}
+            <p>{counter >= max || counter <= 0 ? "Limit reached" : "Step Counter"}</p>
             <p>{ counter }</p>
             <button onClick={ () => dispatch({ type: "COUNT_DOWN", step: step, max: max }) }>-</button>
             <button onClick={ () => dispatch({ type: "COUNT_UP", step: step, max: max }) }>+</button>
