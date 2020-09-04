@@ -14,6 +14,7 @@ import CounterHook from './hooks/CounterHook';
 import StepHook from './hooks/StepHook';
 import CatchHook from './hooks/CatchHook';
 import RollHook from './hooks/RollHook';
+import ClickedReducer from './reducers/ClickedReducer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
@@ -30,6 +31,9 @@ const App = () => (
         <StepHook max={ 100 } step={ 5 } />
         <CatchHook jump={ 100 } />
         <RollHook names={ ["Alex", "Dean", "Gilson", "Marta", "Oliver", "Oscar", "Rohan", "Tom", "Zack"] } />
+      </Route>
+      <Route exact path="/reducers">
+        <ClickedReducer />
       </Route>
       <Route exact path="/news/create">
         <CreateArticle />

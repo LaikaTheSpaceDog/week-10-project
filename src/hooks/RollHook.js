@@ -13,9 +13,9 @@ const RollHook = ({ names }) => {
     }
     return (
         <>
-        <h2>Roll Hook</h2>
-        <p>{names[index]}</p>
-        <button onClick={ updateIndex }>Next</button>
+            <h2>Roll Hook</h2>
+            <p>{names[index]}</p>
+            <button onClick={ updateIndex }>Next</button>
         </>
     )
 }
