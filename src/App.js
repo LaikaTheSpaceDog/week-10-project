@@ -15,6 +15,7 @@ import StepHook from './hooks/StepHook';
 import CatchHook from './hooks/CatchHook';
 import RollHook from './hooks/RollHook';
 import ClickedReducer from './reducers/ClickedReducer';
+import StepReducer from './reducers/StepReducer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
@@ -34,6 +35,7 @@ const App = () => (
       </Route>
       <Route exact path="/reducers">
         <ClickedReducer />
+        <StepReducer max={ 100 } step={ 5 } />
       </Route>
       <Route exact path="/news/create">
         <CreateArticle />
