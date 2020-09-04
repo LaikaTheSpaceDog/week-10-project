@@ -8,7 +8,7 @@ const ToggleHook = ({ initial, alternate }) => {
     return (
         <>
         <h2>Toggle Hook</h2>
-        {toggled === false ? <p onClick={ updateToggled }>{ initial }</p> : <p onClick={ updateToggled }>{ alternate }</p>}
+        <p onClick={ updateToggled }>{ toggled ? alternate : initial }</p>
         </>
     )
 }
