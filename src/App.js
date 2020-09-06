@@ -18,6 +18,7 @@ import TempHook from './hooks/TempHook';
 import ClickedReducer from './reducers/ClickedReducer';
 import StepReducer from './reducers/StepReducer';
 import TempReducer from './reducers/TempReducer';
+import List from './ToDo/List';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
@@ -40,6 +41,9 @@ const App = () => (
         <ClickedReducer />
         <StepReducer max={ 100 } step={ 5 } />
         <TempReducer />
+      </Route>
+      <Route exact path ="/todo">
+        <List />
       </Route>
       <Route exact path="/news/create">
         <CreateArticle />
